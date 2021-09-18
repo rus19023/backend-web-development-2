@@ -3,6 +3,11 @@
 
 <head>
   <% include ../includes/header.ejs %>
+  <style>
+    * {
+      color: red !important
+    }
+  </style>
 </head>
 
 <body>
@@ -12,11 +17,18 @@
         <h1>
           <%= title %>
         </h1>
-        <p>This is the placeholder for Team Activity 02</p>
+        <form method="POST" action="/ta02/addUser" class="form1">
+        <input type="text" name="username">
+        <button type="submit">Submit</button>
+        </form>
       </div>
     </div>
     <div class="container">
-
+      <ul>
+        <% for(user of users){ %>
+          <li><% user.username %></li>
+       <% } %>
+      </ul>
     </div>
 
 

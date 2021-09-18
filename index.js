@@ -17,7 +17,8 @@ const path = require("path");
 const PORT = process.env.PORT || 5000; // So we can run on heroku || (OR) localhost:5000
 
 const app = express();
-
+app.use(bodyParser.urlencoded());
+app.use(bodyParser.json());
 // Route setup. You can implement more in the future!
 const ta01Routes = require("./routes/ta01");
 const ta02Routes = require("./routes/ta02");
