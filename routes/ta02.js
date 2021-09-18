@@ -14,6 +14,7 @@ router.get("/", (req, res, next) => {
 });
 
 router.get("/form", (req, res, next) => {
+  console.log(users);
   res.render("pages/ta02", { path: "/form", users, title: "form" });
 });
 
